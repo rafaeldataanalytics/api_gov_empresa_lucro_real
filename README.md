@@ -89,6 +89,7 @@ Ideal para Back-end e Análise de Dados com Python.
 
 ✅ Pausa entre consultas para respeitar limites de API
 
+``` text
 🗂 Estrutura do Projeto
 Pasta / Arquivo	Descrição
 input_data/	Arquivos de entrada (CNPJs)
@@ -103,7 +104,7 @@ git clone https://github.com/RafaelDataAnalytics/Localizar-CNPJs-Lucro-Real.git
 cd Localizar-CNPJs-Lucro-Real
 pip install -r requirements.txt
 
-
+```
 Requisitos: Python 3.x, pandas, tqdm, openpyxl
 
 📝 Como Funciona
