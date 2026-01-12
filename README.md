@@ -22,7 +22,7 @@ Este projeto automatiza a consulta de CNPJs utilizando a API `publica.cnpj.ws`, 
 - Checkpoint automático
 - Remove duplicatas a cada 150 registros
 
-
+``` text
 - api_gov_empresa_lucro_real/
 │
 ├─ api_gov_empresa_lucro_real/
@@ -39,8 +39,9 @@ Este projeto automatiza a consulta de CNPJs utilizando a API `publica.cnpj.ws`, 
 ├─ scripts_python/
 ├─ temps_project/
 └─ README.md
-
-
+```
 ## Licença
 
 MIT - Livre para uso e modificação.
+
+
