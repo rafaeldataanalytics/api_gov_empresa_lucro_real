@@ -142,6 +142,7 @@ Termina quando todos os CNPJs forem processados
 Excel final contém todos os resultados sem duplicatas
 
 🔄 Fluxo de Processamento
+``` text
 flowchart TD
     A[📄 CSV de entrada] --> B[🔍 Filtra CNPJs já processados]
     B --> C[🌐 Consulta CNPJs via API/Base]
@@ -150,7 +151,7 @@ flowchart TD
     E --> F[⏱ Atualiza checkpoint]
     F --> G[🧹 Remove duplicatas a cada 150 registros]
     G --> H[✅ Fim quando todos os CNPJs forem processados]
-
+```
 💻 Trecho de Código Principal
 for i, cnpj in enumerate(tqdm(novos_cnpjs, desc="Consultando CNPJs", unit="cnpj"), 1):
     dados = consultar_cnpj(cnpj)
