@@ -65,17 +65,11 @@ pip install -r requirements.txt
 ├─ temps_project/
 └─ README.md
 ```
-## Licença
 
-MIT - Livre para uso e modificação.
+# Siga passos abaixo: 
 
 
 📊 Localizar Dados de Empresas Lucro Real
-
-
-
-
-
 
 Automatiza a consulta de CNPJs de empresas do regime Lucro Real, salvando resultados em Excel, evitando duplicatas e permitindo retomar o processamento com checkpoints.
 
@@ -116,6 +110,8 @@ Requisitos: Python 3.x, pandas, tqdm, openpyxl
 1️⃣ Preparação
 
 Ler os CNPJs do CSV
+
+Obs: Csv tem duas colunas Ano e Cnpj
 
 Ler CNPJs já processados no Excel
 
@@ -189,11 +185,11 @@ CSV de entrada	Excel final limpo
 Sem checkpoint	Checkpoint permite retomar
 📌 Contato / Portfólio
 
-GitHub: RafaelDataAnalytics
+GitHub: RafaelDataAnalytics - https://github.com/rafaeldataanalytics
 
 LinkedIn: Rafael Silva
 
-Email: rafael@example.com
+Email: rafae.data.analytics@gmail.com
 
 📝 Licença
 
