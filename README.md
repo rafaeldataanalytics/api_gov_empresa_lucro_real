@@ -188,7 +188,7 @@ Sem checkpoint	Checkpoint permite retomar
 
 GitHub: RafaelDataAnalytics - https://github.com/rafaeldataanalytics
 
-LinkedIn: Rafael Silva
+LinkedIn: Rafael Silva - https://www.linkedin.com/in/rafael-da-silva-rfs/
 
 Email: rafae.data.analytics@gmail.com
 
