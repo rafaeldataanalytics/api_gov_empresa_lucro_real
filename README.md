@@ -191,7 +191,7 @@ GitHub: RafaelDataAnalytics - https://github.com/rafaeldataanalytics
 
 LinkedIn: Rafael Silva - https://www.linkedin.com/in/rafael-da-silva-rfs/
 
-Email: rafae.data.analytics@gmail.com
+Email: rafael.data.analytics@gmail.com
 
 📝 Licença
 
