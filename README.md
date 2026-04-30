@@ -50,26 +50,20 @@ Este tipo de solução pode ser aplicado em:
 
 ## 📂 Estrutura do projeto
 
-
-├─ input_data/ # Arquivos de entrada (CNPJs)
-├─ output_data/ # Arquivos de saída (Excel)
-├─ data_origins/ # Dados brutos
-├─ data_etl/ # Dados tratados
-├─ data_finals/ # Dados finais
-├─ scripts_python/ # Scripts principais
-├─ scripts_ipynb/ # Exploração e testes
-├─ checkpoint/ # Controle de processamento
-├─ utils.py # Funções auxiliares
-├─ main.py # Script principal
-├─ requirements.txt # Dependências
-└─ README.md
-
-
----
-
-## ⚙️ Instalação
-
 ```bash
+├─ input_data/          # Arquivos de entrada (CNPJs)
+├─ output_data/         # Arquivos de saída (Excel)
+├─ data_origins/        # Dados brutos
+├─ data_etl/            # Dados tratados
+├─ data_finals/         # Dados finais
+├─ scripts_python/      # Scripts principais
+├─ scripts_ipynb/       # Exploração e testes
+├─ checkpoint/          # Controle de processamento
+├─ utils.py             # Funções auxiliares
+├─ main.py              # Script principal
+├─ requirements.txt     # Dependências
+└─ README.md
+⚙️ Instalação
 git clone https://github.com/rafaeldataanalytics/api_gov_empresa_lucro_real.git
 cd api_gov_empresa_lucro_real
 pip install -r requirements.txt
