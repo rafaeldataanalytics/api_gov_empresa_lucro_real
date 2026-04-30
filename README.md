@@ -74,7 +74,8 @@ pip install -r requirements.txt
 ▶️ Como usar
 Adicione os CNPJs no arquivo:
 input_data/cnpj_limpos.csv
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/88734f63-4263-45ce-9f00-13b1ad25c090" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/8f82af6d-fab2-4634-97cc-7bfd88228053" />
+
 
 
 O arquivo deve conter colunas como: Ano e Cnpj
