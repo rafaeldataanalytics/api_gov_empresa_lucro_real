@@ -74,7 +74,12 @@ pip install -r requirements.txt
 ▶️ Como usar
 Adicione os CNPJs no arquivo:
 input_data/cnpj_limpos.csv
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/8f82af6d-fab2-4634-97cc-7bfd88228053" />
+
+## 📄 Exemplo de entrada
+
+<p align="center">
+  <img src="docs/entrada.csv.png" width="700"/>
+</p>
 
 
 
@@ -93,7 +98,7 @@ Atualização de checkpoint
 Limpeza periódica de duplicados
 Finalização com base consolidada
 
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9935a928-198d-408b-a302-22c0098af1db" />
+
 
 
 
@@ -116,7 +121,6 @@ for i, cnpj in enumerate(tqdm(novos_cnpjs, desc="Consultando CNPJs", unit="cnpj"
 
     time.sleep(21)
 
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/42eb9be4-fab3-4665-96d2-cb583a811b5b" />
 
 
 📊 Diferenciais do projeto
