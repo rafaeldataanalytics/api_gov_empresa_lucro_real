@@ -1,162 +1,100 @@
+# 🚀 Projeto: Coleta e Estruturação de Dados de Empresas via API (CNPJ)
 
+Este projeto foi desenvolvido com foco em **automação e análise de dados reais**, realizando a coleta de informações públicas de empresas brasileiras via API e estruturando esses dados para uso em análises e tomada de decisão.
 
-# 🚀 Projeto: Análise de CNPJs via API Pública
-
-[![Python](https://img.shields.io/badge/python-3.9+-blue)](https://www.python.org/) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT) 
-[![GitHub issues](https://img.shields.io/github/issues/rafaeldataanalytics/analise-cnpjs)](https://github.com/rafaeldataanalytics/analise-cnpjs/issues)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/rafaeldataanalytics/analise-cnpjs/python-app.yml)](https://github.com/rafaeldataanalytics/analise-cnpjs/actions)
-
-Este projeto automatiza a consulta de CNPJs utilizando a API `publica.cnpj.ws`, salvando os dados em planilhas Excel com verificação de duplicatas. Ideal para análises de dados de empresas brasileiras.
+A solução simula um cenário comum em ambientes corporativos:  
+📊 necessidade de integrar dados externos, tratar inconsistências e gerar bases confiáveis para análise.
 
 ---
 
 ## 🎯 Objetivo
 
-- Automatizar a coleta de dados públicos de CNPJs  
-- Evitar duplicidade de informações  
-- Facilitar análises e relatórios em Excel  
+- Automatizar a coleta de dados públicos de empresas (CNPJ)  
+- Garantir integridade e evitar duplicidade de registros  
+- Estruturar dados para análise em Excel ou ferramentas de BI  
+- Simular um pipeline de dados aplicável a cenários reais  
 
 ---
 
-## ⚙️ Requisitos
+## 💡 Aplicação prática
 
-- Python 3.9+  
-- Instale as dependências:
-```bash
-pip install -r requirements.txt
+Este tipo de solução pode ser aplicado em:
+
+- Enriquecimento de bases de dados empresariais  
+- Análise de fornecedores e parceiros  
+- Apoio à tomada de decisão baseada em dados  
+- Integração de dados externos em sistemas internos  
+
+---
+
+## ⚙️ Principais funcionalidades
+
+- Integração com API pública de CNPJ  
+- Tratamento e organização dos dados  
+- Sistema de checkpoint para retomada de processamento  
+- Controle de duplicidade automatizado  
+- Exportação contínua para Excel  
+- Monitoramento de progresso com `tqdm`  
+
+---
+
+## 🧠 Tecnologias utilizadas
+
+- Python  
+- Pandas  
+- Requests  
+- Openpyxl  
+- Tqdm  
+
+---
+
+## 📂 Estrutura do projeto
 
 
-## Requisitos
-
-- Python 3.9+
-- `pip install -r requirements.txt`
-
-## Como usar
-
-1. Coloque seus CNPJs em `input_data/cnpj_limpos.csv`
-2. Execute:
-   ```bash
-   python main.py
-   ```
-
-## Funcionalidades
-
-- Consulta dados públicos por CNPJ
-- Registro de erros
-- Checkpoint automático
-- Remove duplicatas a cada 150 registros
-
-``` text
-- api_gov_empresa_lucro_real/
-│
-├─ api_gov_empresa_lucro_real/
-├─ atributtes/
-├─ checkpoint/
-├─ data_etl/
-├─ data_finals/
-├─ data_origins/
-├─ ignore_license/
-├─ input_data/
-├─ output_data/
-├─ requirements/
-├─ scripts_ipynb/
-├─ scripts_python/
-├─ temps_project/
+├─ input_data/ # Arquivos de entrada (CNPJs)
+├─ output_data/ # Arquivos de saída (Excel)
+├─ data_origins/ # Dados brutos
+├─ data_etl/ # Dados tratados
+├─ data_finals/ # Dados finais
+├─ scripts_python/ # Scripts principais
+├─ scripts_ipynb/ # Exploração e testes
+├─ checkpoint/ # Controle de processamento
+├─ utils.py # Funções auxiliares
+├─ main.py # Script principal
+├─ requirements.txt # Dependências
 └─ README.md
-```
-
-# Siga passos abaixo: 
 
 
-📊 Localizar Dados de Empresas Lucro Real
+---
 
-Automatiza a consulta de CNPJs de empresas do regime Lucro Real, salvando resultados em Excel, evitando duplicatas e permitindo retomar o processamento com checkpoints.
+## ⚙️ Instalação
 
-Ideal para Back-end e Análise de Dados com Python.
-
-🚀 Funcionalidades
-
-✅ Consulta de CNPJs de empresas do Lucro Real
-
-✅ Salva resultados em Excel automaticamente
-
-✅ Remove duplicatas a cada 150 registros
-
-✅ Retoma de onde parou com checkpoint
-
-✅ Barra de progresso visual com tqdm
-
-✅ Pausa entre consultas para respeitar limites de API
-
-``` text
-🗂 Estrutura do Projeto
-Pasta / Arquivo	Descrição
-input_data/	Arquivos de entrada (CNPJs)
-input_data/cnpj_limpos.csv	Lista de CNPJs a consultar
-output_data/	Arquivos de saída (Excel)
-output_data/resultado_consulta.xlsx	Resultados das consultas
-utils.py	Funções auxiliares: ler, salvar, consultar, remover duplicatas
-checkpoint.txt	Armazena último CNPJ processado
-main.py	Script principal do projeto
-⚙️ Instalação
-git clone https://github.com/RafaelDataAnalytics/Localizar-CNPJs-Lucro-Real.git
-cd Localizar-CNPJs-Lucro-Real
+```bash
+git clone https://github.com/rafaeldataanalytics/api_gov_empresa_lucro_real.git
+cd api_gov_empresa_lucro_real
 pip install -r requirements.txt
+▶️ Como usar
+Adicione os CNPJs no arquivo:
+input_data/cnpj_limpos.csv
 
-```
-Requisitos: Python 3.x, pandas, tqdm, openpyxl
+O arquivo deve conter colunas como: Ano e Cnpj
 
-📝 Como Funciona
-1️⃣ Preparação
-
-Ler os CNPJs do CSV
-
-Obs: Csv tem duas colunas Ano e Cnpj
-
-Ler CNPJs já processados no Excel
-
-Carregar o checkpoint, se existir
-
-2️⃣ Filtragem
-
-Remove duplicados
-
-Cria lista de CNPJs novos a processar
-
-3️⃣ Consulta e Salva
-
-Consulta cada CNPJ via função consultar_cnpj()
-
-Salva resultados em Excel a cada 5 registros
-
-Atualiza checkpoint
-
-Remove duplicatas a cada 150 registros
-
-Pausa de 21 segundos entre consultas
-
-4️⃣ Finalização
-
-Termina quando todos os CNPJs forem processados
-
-Excel final contém todos os resultados sem duplicatas
-
-🔄 Fluxo de Processamento
-``` text
-flowchart TD
-    A[📄 CSV de entrada] --> B[🔍 Filtra CNPJs já processados]
-    B --> C[🌐 Consulta CNPJs via API/Base]
-    C --> D[💾 Armazena resultados temporários]
-    D --> E[📊 Salva em Excel a cada 5 registros]
-    E --> F[⏱ Atualiza checkpoint]
-    F --> G[🧹 Remove duplicatas a cada 150 registros]
-    G --> H[✅ Fim quando todos os CNPJs forem processados]
-```
-💻 Trecho de Código Principal
+Execute o projeto:
+python main.py
+🔄 Fluxo de processamento
+Leitura dos CNPJs do CSV
+Verificação de registros já processados
+Remoção de duplicidades
+Consulta dos dados via API
+Salvamento progressivo em Excel
+Atualização de checkpoint
+Limpeza periódica de duplicados
+Finalização com base consolidada
+⚙️ Lógica principal
 for i, cnpj in enumerate(tqdm(novos_cnpjs, desc="Consultando CNPJs", unit="cnpj"), 1):
     dados = consultar_cnpj(cnpj)
     resultados.append(dados)
+
     salvar_checkpoint(cnpj)
     contador_para_remover += 1
 
@@ -169,32 +107,21 @@ for i, cnpj in enumerate(tqdm(novos_cnpjs, desc="Consultando CNPJs", unit="cnpj"
         contador_para_remover = 0
 
     time.sleep(21)
-
-🎯 Dicas de Uso
-
-Sempre mantenha o checkpoint.txt para retomar grandes consultas
-
-Ajuste time.sleep() de acordo com limites da API
-
-Teste com listas pequenas antes de processar grandes volumes
-
-Excel é atualizado continuamente para evitar perda de dados
-
-📈 Visual do Projeto
-Antes	Depois
-CSV de entrada	Excel final limpo
-🟡 Lista de CNPJs	✅ Resultados completos
-Sem checkpoint	Checkpoint permite retomar
-📌 Contato / Portfólio
-
-GitHub: RafaelDataAnalytics - https://github.com/rafaeldataanalytics
-
-LinkedIn: Rafael Silva - https://www.linkedin.com/in/rafael-da-silva-rfs/
-
+📊 Diferenciais do projeto
+Trabalha com dados reais (API pública)
+Simula um pipeline de dados completo
+Implementa controle de execução com checkpoint
+Pensado para cenários de grande volume de dados
+Estruturado para fácil adaptação em ambientes corporativos
+📈 Possíveis evoluções
+Integração com banco de dados (PostgreSQL)
+Criação de dashboards no Power BI
+Deploy como API (FastAPI / Flask)
+Aplicação em cenários industriais (ex: análise de fornecedores, contratos e performance)
+📌 Contato
+GitHub: https://github.com/rafaeldataanalytics
+LinkedIn: https://www.linkedin.com/in/rafael-da-silva-rfs/
 Email: rafael.data.analytics@gmail.com
-
 📝 Licença
 
 MIT License © Rafael Silva
-
-
